@@ -1,0 +1,18 @@
+<view class="comments">
+  <view class="comments_container" capture-catch:touchmove="preeventDefault" style="width:{{listWidth}}">
+    <view class="comments_mask" capture-catch:touchmove="preeventDefault" capture-catch:longpress="" />
+    <scroll-view class="commets_scroll" show-scrollbar="false" enhanced="true" scroll-with-animation="true" scroll-y="true" scroll-top="{{scrollTop}}px">
+      <view class="comments_list">
+        <view class="comments_item_container" wx:for="{{commentList}}" wx:key="idClient">
+          <view class="comments_item">
+            <text class="comments_name">{{item.fromNick}}：</text>
+            <text>{{item.text}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="bottom_container">
+    <slot></slot>
+  </view>
+</view>
