@@ -15,7 +15,7 @@
 .comments_mask {
   position: absolute;
   width: 100%;
-  height: 30vh;
+  height: 100%;
   top: 0;
   z-index: 2;
 }
@@ -24,13 +24,13 @@
 }
 
 .commets_scroll {
-  height: 30vh;
+  height: 100%;
   overflow: scroll;
 }
 
-.comments_list {
-  padding-top: 30vh;
-}
+/* .comments_list {
+  padding-top: 100%;
+} */
 
 .comments_item_container {
   margin-top: 16rpx;
@@ -40,7 +40,9 @@
 }
 
 .comments_item {
+  /* width: 100%; */
   display: inline-block;
+  flex-wrap: wrap;
   padding: 0 20rpx;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.36);
@@ -51,6 +53,10 @@
 .comments_name {
   font-weight: 500;
   color: #7bc6ff;
+}
+
+.comments_text {
+  word-break: break-all;
 }
 
 .like_container {
